@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.local
+.dev.vars
+.wrangler/
+.sites-runtime/
+__pycache__/
+*.pyc
+backend/data/
+backend/uploads/
+.venv/
+*.zip
+print_agent/agent-state.sqlite3*
+frontend/public/pdf-assets/

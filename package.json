@@ -1,0 +1,30 @@
+{
+  "name": "autoprint-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config frontend/vite.config.js --host 0.0.0.0 --port 4173",
+    "build": "vite build --config frontend/vite.config.js && node scripts/build-worker.mjs",
+    "db:generate": "drizzle-kit generate",
+    "test:api": "python backend/test_workflow.py",
+    "predev": "node scripts/prepare-pdf.mjs",
+    "prebuild": "node scripts/prepare-pdf.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "^7.13.0",
+    "lucide-react": "^1.31.0",
+    "pdfjs-dist": "^5.4.624",
+    "pdf-lib": "^1.17.1",
+    "sonner": "^2.0.8",
+    "drizzle-orm": "0.45.2"
+  },
+  "devDependencies": {
+    "vite": "8.0.13",
+    "@vitejs/plugin-react": "6.0.2",
+    "esbuild": "^0.27.0",
+    "drizzle-kit": "0.31.10"
+  }
+}
